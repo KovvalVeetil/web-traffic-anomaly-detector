@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ip_address: MyString
+  path: MyString
+  status_code: 1
+  timestamp: 2024-09-11 14:01:13
+
+two:
+  ip_address: MyString
+  path: MyString
+  status_code: 1
+  timestamp: 2024-09-11 14:01:13
