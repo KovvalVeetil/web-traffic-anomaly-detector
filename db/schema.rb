@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_09_11_180113) do
+ActiveRecord::Schema[7.1].define(version: 2024_09_12_182836) do
+  create_table "anomalies", force: :cascade do |t|
+    t.string "ip_address"
+    t.string "anomaly_type"
+    t.datetime "detected_at"
+    t.text "details"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "logs", force: :cascade do |t|
     t.string "ip_address"
     t.string "path"
