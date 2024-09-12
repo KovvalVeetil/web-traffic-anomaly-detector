@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Anomaly Alert</h1>
+    <p>An anomaly has been detected:</p>
+    <p><strong>IP Address:</strong> <%= @anomaly.ip_address %></p>
+    <p><strong>Path:</strong> <%= @anomaly.path %></p>
+    <p><strong>Status Code:</strong> <%= @anomaly.status_code %></p>
+    <p><strong>Timestamp:</strong> <%= @anomaly.timestamp %></p>
+    <p><strong>Description:</strong> <%= @anomaly.description %></p>
+  </body>
+</html>

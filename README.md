@@ -101,11 +101,35 @@ sudo systemctl reload apache2
 - Create Log Parsing Script
 Create a log parsing script in lib/log_parsers/parse_logs.rb:
 
-###Setup background jobs with sidekiq
+### Setup background jobs with sidekiq
 
 ```bash
 rails generate job AnomalyDetection
 
 bundle exec sidekiq
 
+```
+
+### Alerts and Notifications
+- Create Mailer
+
+```bash
+rails generate mailer AnomalyMailer
+```
+- Configure Email Settings
+```bash
+config/environments/development.rb
+```
+- Develop Alert Templates
+```bash
+app/views/anomaly_mailer/anomaly_alert.html.erb
+```
+- Integrate Alerts with Detection
+```bash
+app/services/anomaly_detector.rb
+```
+- Testing
+```bash
+anomaly = Anomaly.first
+AnomalyMailer.anomaly_alert(anomaly).deliver_now
 ```
