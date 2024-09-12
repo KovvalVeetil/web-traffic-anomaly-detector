@@ -65,8 +65,47 @@ The Web Traffic Anomaly Detector is a Ruby on Rails application designed to moni
 
 ### Running Background Jobs
 
-If using Sidekiq, start Sidekiq with:
+Setup Redis, Sidekiq
+
+
 
 ```bash
+sudo apt update
+sudo apt install redis-server
+
+sudo systemctl start redis-server
+
+sudo systemctl status redis-server
+
+gem 'sidekiq'
 bundle exec sidekiq
+```
+
+### Configuration
+
+```bash
+config/initializers/sidekiq.rb
+config/application.rb
+```
+
+### Set Up Apache Web Server
+- Create an Apache configuration file for the web server. Save this as web_server_test.conf in /etc/apache2/sites-available/
+
+```bash
+sudo a2ensite web_server_test.conf
+sudo systemctl reload apache2
+```
+
+- Create a sample HTML file for testing in /path/to/your/workspace/web_server_test/html/index.html
+
+- Create Log Parsing Script
+Create a log parsing script in lib/log_parsers/parse_logs.rb:
+
+###Setup background jobs with sidekiq
+
+```bash
+rails generate job AnomalyDetection
+
+bundle exec sidekiq
+
 ```

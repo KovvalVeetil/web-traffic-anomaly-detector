@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ip_address: MyString
+  anomaly_type: MyString
+  detected_at: 2024-09-12 14:28:36
+  details: MyText
+
+two:
+  ip_address: MyString
+  anomaly_type: MyString
+  detected_at: 2024-09-12 14:28:36
+  details: MyText
