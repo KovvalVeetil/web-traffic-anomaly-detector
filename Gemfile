@@ -28,6 +28,12 @@ gem "jbuilder"
 
 gem 'sidekiq'
 
+gem 'active_model_serializers', '~> 0.10.0'
+
+gem 'devise'
+
+
+
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
