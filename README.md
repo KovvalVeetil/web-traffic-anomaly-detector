@@ -1,4 +1,4 @@
-# Web Traffic Anomaly Detector - WIP
+# Web Traffic Anomaly Detector - Backend
 
 The Web Traffic Anomaly Detector is a Ruby on Rails application designed to monitor web traffic logs and detect anomalies such as high traffic from a single IP address or unusual request patterns. The project aims to help identify potential issues like bot attacks, unauthorized access, or other irregular activities in web server traffic.
 
